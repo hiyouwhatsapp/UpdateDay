@@ -12,15 +12,15 @@
 		"mcp",
 		"automation"
 	],
-	"author": "devlewanabe",
+	"author": "hiyouwhatsapp",
 	"license": "MIT",
-	"homepage": "https://github.com/devlewanabe/updateday#readme",
+	"homepage": "https://github.com/hiyouwhatsapp/UpdateDay#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/devlewanabe/updateday.git"
+		"url": "git+https://github.com/hiyouwhatsapp/UpdateDay.git"
 	},
 	"bugs": {
-		"url": "https://github.com/devlewanabe/updateday/issues"
+		"url": "https://github.com/hiyouwhatsapp/UpdateDay/issues"
 	},
 	"type": "module",
 	"bin": {

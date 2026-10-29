@@ -96,7 +96,7 @@ See [docs/AGENTS.md](docs/AGENTS.md).
 ## Contributing
 
 ```bash
-git clone https://github.com/devlewanabe/updateday && cd updateday
+git clone https://github.com/hiyouwhatsapp/UpdateDay && cd UpdateDay
 npm install
 npm test          # unit tests, a full update day against a fake Roblox, edge cases, security
 npm run test:ui   # every tab at desktop and phone size, light and dark (needs Chrome)
