@@ -12,7 +12,7 @@ import { endCountdown, restorePrices, tick, type RunContext } from "./runner.ts"
 import { buildSchedule } from "./schedule.ts";
 import { loadState, saveState } from "./state.ts";
 
-const SERVER_INFO = { name: "updateday", version: "0.2.0" };
+const SERVER_INFO = { name: "updateday", version: "0.2.1" };
 const DEFAULT_PROTOCOL = "2025-06-18";
 const HISTORY_LIMIT = 50;
 

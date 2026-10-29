@@ -1,6 +1,6 @@
 {
 	"name": "updateday",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Free, open-source update-day automation for Roblox games: countdown icons and titles, sales, events, in-game warnings and server restarts, run with your Open Cloud API key.",
 	"keywords": [
 		"roblox",
