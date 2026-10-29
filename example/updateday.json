@@ -1,0 +1,37 @@
+{
+	"universeId": 1234567890,
+	"name": "My Game",
+	"updateAt": "2026-11-07T17:00:00Z",
+	"adminAbuseMinutes": 60,
+	"countdown": {
+		"style": "classic",
+		"skip": ["5h", "4h"]
+	},
+	"title": {
+		"afterFormat": "{name} [UPDATE 5]"
+	},
+	"sale": {
+		"percentOff": 30,
+		"durationHours": 48,
+		"gamePasses": "all",
+		"developerProducts": "all",
+		"nameTag": "[{percent}% OFF]"
+	},
+	"event": {
+		"title": "Update 5",
+		"subtitle": "New world, new pets",
+		"description": "Join for the admin abuse hour!",
+		"durationHours": 2,
+		"visibility": "Public"
+	},
+	"broadcast": {
+		"topic": "UpdateDay",
+		"marks": ["10m", "5m", "1m"]
+	},
+	"restartServers": {
+		"bleedOffMinutes": 5
+	},
+	"notify": {
+		"events": ["reminders", "failures", "live", "finished"]
+	}
+}

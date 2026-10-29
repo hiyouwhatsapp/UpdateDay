@@ -1,0 +1,64 @@
+{
+	"name": "updateday",
+	"version": "0.2.0",
+	"description": "Free, open-source update-day automation for Roblox games: countdown icons and titles, sales, events, in-game warnings and server restarts, run with your Open Cloud API key.",
+	"keywords": [
+		"roblox",
+		"open-cloud",
+		"update",
+		"countdown",
+		"game-icon",
+		"sale",
+		"mcp",
+		"automation"
+	],
+	"author": "devlewanabe",
+	"license": "MIT",
+	"homepage": "https://github.com/devlewanabe/updateday#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/devlewanabe/updateday.git"
+	},
+	"bugs": {
+		"url": "https://github.com/devlewanabe/updateday/issues"
+	},
+	"type": "module",
+	"bin": {
+		"updateday": "bin/updateday.js"
+	},
+	"files": [
+		"bin",
+		"dist",
+		"ui",
+		"assets",
+		"roblox",
+		"templates",
+		"example",
+		"docs",
+		"README.md",
+		"LICENSE"
+	],
+	"engines": {
+		"node": ">=22.18"
+	},
+	"scripts": {
+		"ui": "node src/cli.ts ui",
+		"plan": "node src/cli.ts plan",
+		"tick": "node src/cli.ts tick",
+		"watch": "node src/cli.ts watch",
+		"typecheck": "tsc && tsc -p test",
+		"test": "node --test \"test/*.test.ts\"",
+		"test:ui": "node scripts/ui-smoke.mjs",
+		"check": "node src/cli.ts check",
+		"mcp": "node src/cli.ts mcp",
+		"build": "tsc -p tsconfig.build.json",
+		"prepare": "npm run build"
+	},
+	"dependencies": {
+		"sharp": "^0.34.3"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.0",
+		"typescript": "^5.8.3"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"updateAt": "2026-11-07T17:00:00Z",
+	"adminAbuseMinutes": 60,
+	"sale": {
+		"percentOff": 30,
+		"durationHours": 48,
+		"gamePasses": "all",
+		"developerProducts": "all"
+	},
+	"restartServers": { "bleedOffMinutes": 5 },
+	"games": [
+		{ "name": "Main Game", "universeId": 1234567890 },
+		{ "name": "Spin-off", "universeId": 2345678901, "updateAt": "2026-11-08T17:00:00Z", "sale": false },
+		{ "name": "Group Game", "universeId": 3456789012, "apiKeyEnv": "UPDATEDAY_GROUP_KEY", "countdown": { "dim": 0.6 } }
+	]
+}

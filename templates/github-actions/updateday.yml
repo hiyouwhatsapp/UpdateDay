@@ -1,0 +1,35 @@
+name: UpdateDay
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: updateday
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fonts for translated countdown labels
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends fonts-noto-core fonts-noto-cjk
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npx --yes updateday@latest tick updateday.json
+        env:
+          UPDATEDAY_API_KEY: ${{ secrets.UPDATEDAY_API_KEY }}
+          UPDATEDAY_DISCORD_WEBHOOK: ${{ secrets.UPDATEDAY_DISCORD_WEBHOOK }}
+      - name: Save progress
+        run: |
+          git config user.name "updateday"
+          git config user.email "updateday@users.noreply.github.com"
+          git add -f updateday*.state.json updateday*.original-icon.png updateday-history.jsonl updateday-icons 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "UpdateDay progress"
+          git push
